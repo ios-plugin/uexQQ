@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE4CEB501A833B7200BA2009 /* libAppCanEngine_IOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4CEB4F1A833B7200BA2009 /* libAppCanEngine_IOS.a */; };
+		F7474A381A80D0F2002EB188 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7474A371A80D0F2002EB188 /* Foundation.framework */; };
+		F7D2BE0C1A80D163006E6335 /* EUExQQ.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2BDFE1A80D163006E6335 /* EUExQQ.m */; };
+		F7D2BE0F1A80D256006E6335 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D2BE0E1A80D256006E6335 /* QuartzCore.framework */; };
+		F7D2BE111A80D260006E6335 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D2BE101A80D260006E6335 /* CoreGraphics.framework */; };
+		F7D2BE131A80D26E006E6335 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D2BE121A80D26E006E6335 /* SystemConfiguration.framework */; };
+		F7D2BE151A80D275006E6335 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D2BE141A80D275006E6335 /* MobileCoreServices.framework */; };
+		F7D2BE171A80D27D006E6335 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D2BE161A80D27D006E6335 /* CoreTelephony.framework */; };
+		F7D2BE191A80D288006E6335 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D2BE181A80D288006E6335 /* MapKit.framework */; };
+		F7D2BE1B1A80D293006E6335 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D2BE1A1A80D293006E6335 /* AudioToolbox.framework */; };
+		F7D2BE1D1A80D29A006E6335 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D2BE1C1A80D29A006E6335 /* UIKit.framework */; };
+		F7D2BE1F1A80D2A3006E6335 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D2BE1E1A80D2A3006E6335 /* libsqlite3.dylib */; };
+		F7D2BE211A80D2AA006E6335 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D2BE201A80D2AA006E6335 /* libz.dylib */; };
+		F7D2BE2F1A80D9E6006E6335 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D2BE2E1A80D9E6006E6335 /* TencentOpenAPI.framework */; };
+		F7D2BE311A80DB06006E6335 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D2BE301A80DB06006E6335 /* Security.framework */; };
+		F7D2BE331A80DB10006E6335 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D2BE321A80DB10006E6335 /* libiconv.dylib */; };
+		F7D2BE351A80DB24006E6335 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D2BE341A80DB24006E6335 /* libstdc++.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F7474A321A80D0F2002EB188 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DE4CEB4F1A833B7200BA2009 /* libAppCanEngine_IOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAppCanEngine_IOS.a; path = ../libAppCanEngine_IOS.a; sourceTree = "<group>"; };
+		F7474A341A80D0F2002EB188 /* uexQQ.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = uexQQ.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7474A371A80D0F2002EB188 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F7D2BDF91A80D163006E6335 /* EUExBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBase.h; sourceTree = "<group>"; };
+		F7D2BDFA1A80D163006E6335 /* EUExBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBaseDefine.h; sourceTree = "<group>"; };
+		F7D2BDFB1A80D163006E6335 /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
+		F7D2BDFD1A80D163006E6335 /* EUExQQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUExQQ.h; path = EUExQQ/EUExQQ.h; sourceTree = SOURCE_ROOT; };
+		F7D2BDFE1A80D163006E6335 /* EUExQQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EUExQQ.m; path = EUExQQ/EUExQQ.m; sourceTree = SOURCE_ROOT; };
+		F7D2BE011A80D163006E6335 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		F7D2BE021A80D163006E6335 /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
+		F7D2BE031A80D163006E6335 /* MD5Digest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Digest.h; sourceTree = "<group>"; };
+		F7D2BE041A80D163006E6335 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		F7D2BE051A80D163006E6335 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		F7D2BE061A80D163006E6335 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		F7D2BE071A80D163006E6335 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		F7D2BE081A80D163006E6335 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		F7D2BE091A80D163006E6335 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		F7D2BE0E1A80D256006E6335 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F7D2BE101A80D260006E6335 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F7D2BE121A80D26E006E6335 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F7D2BE141A80D275006E6335 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F7D2BE161A80D27D006E6335 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F7D2BE181A80D288006E6335 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F7D2BE1A1A80D293006E6335 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F7D2BE1C1A80D29A006E6335 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F7D2BE1E1A80D2A3006E6335 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		F7D2BE201A80D2AA006E6335 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F7D2BE2D1A80D9E6006E6335 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TencentOpenApi_IOS_Bundle.bundle; path = uexQQ/TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		F7D2BE2E1A80D9E6006E6335 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = uexQQ/TencentOpenAPI.framework; sourceTree = "<group>"; };
+		F7D2BE301A80DB06006E6335 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F7D2BE321A80DB10006E6335 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		F7D2BE341A80DB24006E6335 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7474A311A80D0F2002EB188 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7D2BE351A80DB24006E6335 /* libstdc++.dylib in Frameworks */,
+				F7D2BE331A80DB10006E6335 /* libiconv.dylib in Frameworks */,
+				F7D2BE311A80DB06006E6335 /* Security.framework in Frameworks */,
+				F7474A381A80D0F2002EB188 /* Foundation.framework in Frameworks */,
+				F7D2BE211A80D2AA006E6335 /* libz.dylib in Frameworks */,
+				F7D2BE1F1A80D2A3006E6335 /* libsqlite3.dylib in Frameworks */,
+				F7D2BE1D1A80D29A006E6335 /* UIKit.framework in Frameworks */,
+				F7D2BE2F1A80D9E6006E6335 /* TencentOpenAPI.framework in Frameworks */,
+				F7D2BE1B1A80D293006E6335 /* AudioToolbox.framework in Frameworks */,
+				F7D2BE191A80D288006E6335 /* MapKit.framework in Frameworks */,
+				F7D2BE171A80D27D006E6335 /* CoreTelephony.framework in Frameworks */,
+				F7D2BE151A80D275006E6335 /* MobileCoreServices.framework in Frameworks */,
+				F7D2BE131A80D26E006E6335 /* SystemConfiguration.framework in Frameworks */,
+				F7D2BE111A80D260006E6335 /* CoreGraphics.framework in Frameworks */,
+				DE4CEB501A833B7200BA2009 /* libAppCanEngine_IOS.a in Frameworks */,
+				F7D2BE0F1A80D256006E6335 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7474A2B1A80D0F2002EB188 = {
+			isa = PBXGroup;
+			children = (
+				F7474A391A80D0F2002EB188 /* uexQQ */,
+				F7474A361A80D0F2002EB188 /* Frameworks */,
+				F7474A351A80D0F2002EB188 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7474A351A80D0F2002EB188 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7474A341A80D0F2002EB188 /* uexQQ.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7474A361A80D0F2002EB188 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE4CEB4F1A833B7200BA2009 /* libAppCanEngine_IOS.a */,
+				F7D2BE341A80DB24006E6335 /* libstdc++.dylib */,
+				F7D2BE321A80DB10006E6335 /* libiconv.dylib */,
+				F7D2BE301A80DB06006E6335 /* Security.framework */,
+				F7D2BE2D1A80D9E6006E6335 /* TencentOpenApi_IOS_Bundle.bundle */,
+				F7D2BE2E1A80D9E6006E6335 /* TencentOpenAPI.framework */,
+				F7D2BE201A80D2AA006E6335 /* libz.dylib */,
+				F7D2BE1E1A80D2A3006E6335 /* libsqlite3.dylib */,
+				F7D2BE1C1A80D29A006E6335 /* UIKit.framework */,
+				F7D2BE1A1A80D293006E6335 /* AudioToolbox.framework */,
+				F7D2BE181A80D288006E6335 /* MapKit.framework */,
+				F7D2BE161A80D27D006E6335 /* CoreTelephony.framework */,
+				F7D2BE141A80D275006E6335 /* MobileCoreServices.framework */,
+				F7D2BE121A80D26E006E6335 /* SystemConfiguration.framework */,
+				F7D2BE101A80D260006E6335 /* CoreGraphics.framework */,
+				F7D2BE0E1A80D256006E6335 /* QuartzCore.framework */,
+				F7474A371A80D0F2002EB188 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7474A391A80D0F2002EB188 /* uexQQ */ = {
+			isa = PBXGroup;
+			children = (
+				F7D2BDF81A80D163006E6335 /* engineHeader */,
+				F7D2BDFD1A80D163006E6335 /* EUExQQ.h */,
+				F7D2BDFE1A80D163006E6335 /* EUExQQ.m */,
+				F7D2BDFF1A80D163006E6335 /* sourceCode */,
+			);
+			path = uexQQ;
+			sourceTree = "<group>";
+		};
+		F7D2BDF81A80D163006E6335 /* engineHeader */ = {
+			isa = PBXGroup;
+			children = (
+				F7D2BDF91A80D163006E6335 /* EUExBase.h */,
+				F7D2BDFA1A80D163006E6335 /* EUExBaseDefine.h */,
+				F7D2BDFB1A80D163006E6335 /* EUtility.h */,
+			);
+			name = engineHeader;
+			path = EUExQQ/engineHeader;
+			sourceTree = SOURCE_ROOT;
+		};
+		F7D2BDFF1A80D163006E6335 /* sourceCode */ = {
+			isa = PBXGroup;
+			children = (
+				F7D2BE001A80D163006E6335 /* JSON */,
+			);
+			name = sourceCode;
+			path = EUExQQ/sourceCode;
+			sourceTree = SOURCE_ROOT;
+		};
+		F7D2BE001A80D163006E6335 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				F7D2BE011A80D163006E6335 /* JSON.h */,
+				F7D2BE021A80D163006E6335 /* JSONParser.h */,
+				F7D2BE031A80D163006E6335 /* MD5Digest.h */,
+				F7D2BE041A80D163006E6335 /* NSObject+SBJSON.h */,
+				F7D2BE051A80D163006E6335 /* NSString+SBJSON.h */,
+				F7D2BE061A80D163006E6335 /* SBJSON.h */,
+				F7D2BE071A80D163006E6335 /* SBJsonBase.h */,
+				F7D2BE081A80D163006E6335 /* SBJsonParser.h */,
+				F7D2BE091A80D163006E6335 /* SBJsonWriter.h */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7474A331A80D0F2002EB188 /* uexQQ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7474A571A80D0F2002EB188 /* Build configuration list for PBXNativeTarget "uexQQ" */;
+			buildPhases = (
+				F7474A301A80D0F2002EB188 /* Sources */,
+				F7474A311A80D0F2002EB188 /* Frameworks */,
+				F7474A321A80D0F2002EB188 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = uexQQ;
+			productName = uexQQ;
+			productReference = F7474A341A80D0F2002EB188 /* uexQQ.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7474A2C1A80D0F2002EB188 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = AppCan.can;
+			};
+			buildConfigurationList = F7474A2F1A80D0F2002EB188 /* Build configuration list for PBXProject "uexQQ" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F7474A2B1A80D0F2002EB188;
+			productRefGroup = F7474A351A80D0F2002EB188 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7474A331A80D0F2002EB188 /* uexQQ */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7474A301A80D0F2002EB188 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7D2BE0C1A80D163006E6335 /* EUExQQ.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F7474A551A80D0F2002EB188 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wang GuoChun (GJL3LN9D59)";
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexQQ/";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Debug;
+		};
+		F7474A561A80D0F2002EB188 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wang GuoChun (GJL3LN9D59)";
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexQQ/";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Release;
+		};
+		F7474A581A80D0F2002EB188 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: leilei xu (T8E4RVNP82)";
+				DSTROOT = /tmp/uexQQ.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EUExQQ/sourceCode",
+					"$(PROJECT_DIR)/uexQQ",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/liguofu/Desktop/每一天/20150130/public",
+					/Users/huxuesen/Desktop/AppCanPlugin3.0/trunk/code/public,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Debug;
+		};
+		F7474A591A80D0F2002EB188 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: leilei xu (T8E4RVNP82)";
+				DSTROOT = /tmp/uexQQ.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EUExQQ/sourceCode",
+					"$(PROJECT_DIR)/uexQQ",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/liguofu/Desktop/每一天/20150130/public",
+					/Users/huxuesen/Desktop/AppCanPlugin3.0/trunk/code/public,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7474A2F1A80D0F2002EB188 /* Build configuration list for PBXProject "uexQQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7474A551A80D0F2002EB188 /* Debug */,
+				F7474A561A80D0F2002EB188 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7474A571A80D0F2002EB188 /* Build configuration list for PBXNativeTarget "uexQQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7474A581A80D0F2002EB188 /* Debug */,
+				F7474A591A80D0F2002EB188 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7474A2C1A80D0F2002EB188 /* Project object */;
+}

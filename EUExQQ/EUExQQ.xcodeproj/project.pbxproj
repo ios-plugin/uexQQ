@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A0A19B0B198F8DB900BCE211 /* EUExQQ.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A19AFD198F8DB900BCE211 /* EUExQQ.m */; };
+		A0D85481198B2B5100DA58A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D85480198B2B5100DA58A1 /* Foundation.framework */; };
+		F7D45A311A175FA800B0335F /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D45A301A175FA800B0335F /* TencentOpenAPI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A0D8547B198B2B5100DA58A1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A0A19AF8198F8DB900BCE211 /* EUExBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBase.h; sourceTree = "<group>"; };
+		A0A19AF9198F8DB900BCE211 /* EUExBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBaseDefine.h; sourceTree = "<group>"; };
+		A0A19AFA198F8DB900BCE211 /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
+		A0A19AFB198F8DB900BCE211 /* EUExQQ-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EUExQQ-Prefix.pch"; sourceTree = "<group>"; };
+		A0A19AFC198F8DB900BCE211 /* EUExQQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExQQ.h; sourceTree = "<group>"; };
+		A0A19AFD198F8DB900BCE211 /* EUExQQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EUExQQ.m; sourceTree = "<group>"; };
+		A0A19B00198F8DB900BCE211 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		A0A19B01198F8DB900BCE211 /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
+		A0A19B02198F8DB900BCE211 /* MD5Digest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Digest.h; sourceTree = "<group>"; };
+		A0A19B03198F8DB900BCE211 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		A0A19B04198F8DB900BCE211 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		A0A19B05198F8DB900BCE211 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		A0A19B06198F8DB900BCE211 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		A0A19B07198F8DB900BCE211 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		A0A19B08198F8DB900BCE211 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		A0D8547D198B2B5100DA58A1 /* libuexQQ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexQQ.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0D85480198B2B5100DA58A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F7D45A2F1A175FA800B0335F /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TencentOpenApi_IOS_Bundle.bundle; path = EUExQQ/sourceCode/TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		F7D45A301A175FA800B0335F /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = EUExQQ/sourceCode/TencentOpenAPI.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0D8547A198B2B5100DA58A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0D85481198B2B5100DA58A1 /* Foundation.framework in Frameworks */,
+				F7D45A311A175FA800B0335F /* TencentOpenAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A0A19AF6198F8DB900BCE211 /* EUExQQ */ = {
+			isa = PBXGroup;
+			children = (
+				A0A19AF7198F8DB900BCE211 /* engineHeader */,
+				A0A19AFB198F8DB900BCE211 /* EUExQQ-Prefix.pch */,
+				A0A19AFC198F8DB900BCE211 /* EUExQQ.h */,
+				A0A19AFD198F8DB900BCE211 /* EUExQQ.m */,
+				A0A19AFE198F8DB900BCE211 /* sourceCode */,
+			);
+			name = EUExQQ;
+			sourceTree = "<group>";
+		};
+		A0A19AF7198F8DB900BCE211 /* engineHeader */ = {
+			isa = PBXGroup;
+			children = (
+				A0A19AF8198F8DB900BCE211 /* EUExBase.h */,
+				A0A19AF9198F8DB900BCE211 /* EUExBaseDefine.h */,
+				A0A19AFA198F8DB900BCE211 /* EUtility.h */,
+			);
+			path = engineHeader;
+			sourceTree = "<group>";
+		};
+		A0A19AFE198F8DB900BCE211 /* sourceCode */ = {
+			isa = PBXGroup;
+			children = (
+				A0A19AFF198F8DB900BCE211 /* JSON */,
+			);
+			path = sourceCode;
+			sourceTree = "<group>";
+		};
+		A0A19AFF198F8DB900BCE211 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				A0A19B00198F8DB900BCE211 /* JSON.h */,
+				A0A19B01198F8DB900BCE211 /* JSONParser.h */,
+				A0A19B02198F8DB900BCE211 /* MD5Digest.h */,
+				A0A19B03198F8DB900BCE211 /* NSObject+SBJSON.h */,
+				A0A19B04198F8DB900BCE211 /* NSString+SBJSON.h */,
+				A0A19B05198F8DB900BCE211 /* SBJSON.h */,
+				A0A19B06198F8DB900BCE211 /* SBJsonBase.h */,
+				A0A19B07198F8DB900BCE211 /* SBJsonParser.h */,
+				A0A19B08198F8DB900BCE211 /* SBJsonWriter.h */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		A0D85474198B2B5100DA58A1 = {
+			isa = PBXGroup;
+			children = (
+				A0D85482198B2B5100DA58A1 /* EUExQQ */,
+				A0D8547F198B2B5100DA58A1 /* Frameworks */,
+				A0D8547E198B2B5100DA58A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A0D8547E198B2B5100DA58A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0D8547D198B2B5100DA58A1 /* libuexQQ.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0D8547F198B2B5100DA58A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7D45A2F1A175FA800B0335F /* TencentOpenApi_IOS_Bundle.bundle */,
+				F7D45A301A175FA800B0335F /* TencentOpenAPI.framework */,
+				A0D85480198B2B5100DA58A1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0D85482198B2B5100DA58A1 /* EUExQQ */ = {
+			isa = PBXGroup;
+			children = (
+				A0A19AF6198F8DB900BCE211 /* EUExQQ */,
+			);
+			path = EUExQQ;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A0D8547C198B2B5100DA58A1 /* EUExQQ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0D854A0198B2B5200DA58A1 /* Build configuration list for PBXNativeTarget "EUExQQ" */;
+			buildPhases = (
+				A0D85479198B2B5100DA58A1 /* Sources */,
+				A0D8547A198B2B5100DA58A1 /* Frameworks */,
+				A0D8547B198B2B5100DA58A1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EUExQQ;
+			productName = EUExQQ;
+			productReference = A0D8547D198B2B5100DA58A1 /* libuexQQ.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0D85475198B2B5100DA58A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = hui.li;
+			};
+			buildConfigurationList = A0D85478198B2B5100DA58A1 /* Build configuration list for PBXProject "EUExQQ" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A0D85474198B2B5100DA58A1;
+			productRefGroup = A0D8547E198B2B5100DA58A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0D8547C198B2B5100DA58A1 /* EUExQQ */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0D85479198B2B5100DA58A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0A19B0B198F8DB900BCE211 /* EUExQQ.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A0D8549E198B2B5200DA58A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexQQ";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A0D8549F198B2B5200DA58A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexQQ";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A0D854A1198B2B5200DA58A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DSTROOT = /tmp/EUExQQ.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/huili/Desktop/appcan/我的任务/uexQQ/EUExQQ/EUExQQ/sourceCode",
+					"$(PROJECT_DIR)/EUExQQ/sourceCode",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EUExQQ/EUExQQ-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = uexQQ;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A0D854A2198B2B5200DA58A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DSTROOT = /tmp/EUExQQ.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/huili/Desktop/appcan/我的任务/uexQQ/EUExQQ/EUExQQ/sourceCode",
+					"$(PROJECT_DIR)/EUExQQ/sourceCode",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EUExQQ/EUExQQ-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = uexQQ;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0D85478198B2B5100DA58A1 /* Build configuration list for PBXProject "EUExQQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0D8549E198B2B5200DA58A1 /* Debug */,
+				A0D8549F198B2B5200DA58A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0D854A0198B2B5200DA58A1 /* Build configuration list for PBXNativeTarget "EUExQQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0D854A1198B2B5200DA58A1 /* Debug */,
+				A0D854A2198B2B5200DA58A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A0D85475198B2B5100DA58A1 /* Project object */;
+}

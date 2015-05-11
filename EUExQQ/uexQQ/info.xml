@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uexplugins>
+    <plugin
+        uexName="uexQQ" version="3.0.6" build="6">
+        <info>6:解决分享多张图片到QQ空间闪退的bug</info>
+        <build>5:增加检查QQ客户端是否已安装的方法</build>
+        <build>4:支持IDE</build>
+        <build>3:支持IDE</build>
+        <build>2:修复分享图文到QQ空间崩溃的bug</build>
+        <build>1:更新第三方TencentOpenAPI.framework,支持arm64</build>
+        <build>0:uexQQ QQ分享和QQ空间分享插件</build>
+    </plugin>
+</uexplugins>

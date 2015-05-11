@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<uexplugins>
+    <plugin name="uexQQ">
+        <method name="login"></method>
+        <method name="shareWebImgTextToQQ"></method>
+        <method name="shareLocalImgToQQ"></method>
+        <method name="shareAudioToQQ"></method>
+        <method name="shareImgTextToQZone"></method>
+        <method name="isQQInstalled"></method>
+    </plugin>
+</uexplugins>
+
+
