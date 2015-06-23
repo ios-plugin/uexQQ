@@ -460,7 +460,7 @@
     [self jsSuccessWithName:@" uexQQ.cbLogin" opId:0 dataType:2 strData:self.cbQQLoginStr];
 }
 - (void)tencentDidLogin {
-    
+    /*
     if (_tencentOAuth.accessToken && 0 != [_tencentOAuth.accessToken length]) {
         self.cbQQLoginStr = [NSString stringWithFormat:@"{\"ret\":0,\"openid\":\"%@\",\"access_token\":\"%@\"}",_tencentOAuth.openId,_tencentOAuth.accessToken];
         
@@ -468,6 +468,19 @@
         self.cbQQLoginStr = [NSString stringWithFormat:@"{\"ret\":1,\"openid\":\"%@\",\"access_token\":\"%@\"}",_tencentOAuth.openId,_tencentOAuth.accessToken];
         
     }
+     */
+    //2015-6-23 回调结构修改by lkl
+    NSNumber *ret=@1;
+    if(_tencentOAuth.accessToken && 0 != [_tencentOAuth.accessToken length]){
+        ret=@0;
+    }
+    NSMutableDictionary *data=[NSMutableDictionary dictionary];
+    [data setValue:_tencentOAuth.openId forKey:@"openid"];
+    [data setValue:_tencentOAuth.accessToken forKey:@"access_token"];
+    NSMutableDictionary *resultDict=[NSMutableDictionary dictionary];
+    [resultDict setValue:ret forKey:@"ret"];
+    [resultDict setValue:data forKey:@"data"];
+    self.cbQQLoginStr=[resultDict JSONFragment];
     [self performSelector:@selector(cbLogin)withObject:self afterDelay:1.0];
 }
 

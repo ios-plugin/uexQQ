@@ -2,7 +2,8 @@
 <uexplugins>
     <plugin
         uexName="uexQQ" version="3.0.6" build="6">
-        <info>6:解决分享多张图片到QQ空间闪退的bug</info>
+        <info>7:uexQQ.cbLogin回调结构修正</info>
+        <build>6:解决分享多张图片到QQ空间闪退的bug</build>
         <build>5:增加检查QQ客户端是否已安装的方法</build>
         <build>4:支持IDE</build>
         <build>3:支持IDE</build>
