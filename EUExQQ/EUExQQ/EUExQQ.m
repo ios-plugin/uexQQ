@@ -124,6 +124,10 @@
                            previewImageData:fristData];
             }
             self.qqApiObj = newsObj;
+            SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:newsObj];
+            QQApiSendResultCode sent = [QQApiInterface sendReq:req];
+            [self handleSendResult:sent];
+            /*
             if(cflag == 1){
                 UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"请选择分享的平台" message:@"请选择你要分享内容的平台" delegate:self cancelButtonTitle:@"QZone" otherButtonTitles:@"QQ", nil];
                 alertView.tag = alertViewAboutQQorQzone;
@@ -140,6 +144,7 @@
                 QQApiSendResultCode sent = [QQApiInterface SendReqToQZone:req];
                 [self handleSendResult:sent];
             }
+             */
             
         }
     }
@@ -181,6 +186,10 @@
             
         }
         self.qqApiObj = imgObj;
+        SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:imgObj];
+        QQApiSendResultCode sent = [QQApiInterface sendReq:req];
+        [self handleSendResult:sent];
+        /*
         
         if(cflag == 1){
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"请选择分享的平台" message:@"请选择你要分享内容的平台" delegate:self cancelButtonTitle:@"QZone" otherButtonTitles:@"QQ", nil];
@@ -198,6 +207,7 @@
             QQApiSendResultCode sent = [QQApiInterface sendReq:req];
             [self handleSendResult:sent];
         }
+         */
     }
 }
 //分享图文到QQ空间
@@ -296,6 +306,10 @@
         [audioObj setFlashURL:[NSURL URLWithString:flashURL]];
         
         self.qqApiObj = audioObj;
+        SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:audioObj];
+        QQApiSendResultCode sent = [QQApiInterface sendReq:req];
+        [self handleSendResult:sent];
+        /*
         if(cflag == 1){
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"请选择分享的平台" message:@"请选择你要分享内容的平台" delegate:self cancelButtonTitle:@"QZone" otherButtonTitles:@"QQ", nil];
             alertView.tag = alertViewAboutQQorQzone;
@@ -312,6 +326,7 @@
             QQApiSendResultCode sent = [QQApiInterface SendReqToQZone:req];
             [self handleSendResult:sent];
         }
+         */
     }
 }
 - (void)handleSendResult:(QQApiSendResultCode)sendResult
