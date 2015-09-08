@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42FAB3011B9EAE8400AD59E9 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FAB3001B9EAE8400AD59E9 /* ImageIO.framework */; };
 		DE4CEB501A833B7200BA2009 /* libAppCanEngine_IOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4CEB4F1A833B7200BA2009 /* libAppCanEngine_IOS.a */; };
 		F7474A381A80D0F2002EB188 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7474A371A80D0F2002EB188 /* Foundation.framework */; };
 		F7D2BE0C1A80D163006E6335 /* EUExQQ.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2BDFE1A80D163006E6335 /* EUExQQ.m */; };
@@ -39,6 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		42FAB3001B9EAE8400AD59E9 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		DE4CEB4F1A833B7200BA2009 /* libAppCanEngine_IOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAppCanEngine_IOS.a; path = ../libAppCanEngine_IOS.a; sourceTree = "<group>"; };
 		F7474A341A80D0F2002EB188 /* uexQQ.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = uexQQ.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7474A371A80D0F2002EB188 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42FAB3011B9EAE8400AD59E9 /* ImageIO.framework in Frameworks */,
 				F7D2BE351A80DB24006E6335 /* libstdc++.dylib in Frameworks */,
 				F7D2BE331A80DB10006E6335 /* libiconv.dylib in Frameworks */,
 				F7D2BE311A80DB06006E6335 /* Security.framework in Frameworks */,
@@ -120,6 +123,7 @@
 		F7474A361A80D0F2002EB188 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42FAB3001B9EAE8400AD59E9 /* ImageIO.framework */,
 				DE4CEB4F1A833B7200BA2009 /* libAppCanEngine_IOS.a */,
 				F7D2BE341A80DB24006E6335 /* libstdc++.dylib */,
 				F7D2BE321A80DB10006E6335 /* libiconv.dylib */,
