@@ -334,9 +334,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
 				LIBRARY_SEARCH_PATHS = (
+					../,
 					"$(inherited)",
-					"/Users/liguofu/Desktop/每一天/20150130/public",
-					/Users/huxuesen/Desktop/AppCanPlugin3.0/trunk/code/public,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -360,9 +359,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
 				LIBRARY_SEARCH_PATHS = (
+					../,
 					"$(inherited)",
-					"/Users/liguofu/Desktop/每一天/20150130/public",
-					/Users/huxuesen/Desktop/AppCanPlugin3.0/trunk/code/public,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
