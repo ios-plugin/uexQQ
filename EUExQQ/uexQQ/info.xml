@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <uexplugins>
     <plugin
-        uexName="uexQQ" version="3.0.8" build="8">
-        <info>8:废弃分享到QQ好友中的cFlag参数</info>
+        uexName="uexQQ" version="3.0.9" build="9">
+        <info>9:修复取消登录时cbLogin不触发的bug</info>
+        <build>8:废弃分享到QQ好友中的cFlag参数</build>
         <build>7:uexQQ.cbLogin回调结构修正</build>
         <build>6:解决分享多张图片到QQ空间闪退的bug</build>
         <build>5:增加检查QQ客户端是否已安装的方法</build>
