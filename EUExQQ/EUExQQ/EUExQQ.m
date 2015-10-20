@@ -12,7 +12,7 @@
 #import "JSON.h"
 #import <TencentOpenAPI/sdkdef.h>
 #import "EUExBase.h"
-#import "TencentOpenAPI/QQApiInterface.h"
+#import <TencentOpenAPI/QQApiInterface.h>
 
 @implementation EUExQQ
 
@@ -72,7 +72,7 @@
 }
 
 -(void)isQQInstalled:(NSMutableArray *)inArguments{
-    BOOL isInstalled = [QQApi isQQInstalled];
+    BOOL isInstalled = [QQApiInterface isQQInstalled];
     if (isInstalled) {
         [self jsSuccessWithName:@"uexQQ.cbIsQQInstalled" opId:0 dataType:UEX_CALLBACK_DATATYPE_INT intData:UEX_CSUCCESS];
     }else{
@@ -95,16 +95,14 @@
             
         }
         NSString *json = [inArguments objectAtIndex:1];
-        NSString *title = @"";
-        NSString *description = @"";
-        NSString *utf8String = @"";
+
         NSString *appName = nil;
         int  cflag ;
         NSMutableDictionary *dict = [[[NSMutableDictionary alloc] init] autorelease];
         dict = [json JSONValue];
-        title = [dict objectForKey:@"title"];
-        description = [dict objectForKey:@"summary"];
-        utf8String = [dict objectForKey:@"targetUrl"];
+        NSString *title = ([dict objectForKey:@"title"]&&[dict[@"title"] length]>0)?dict[@"title"]:@" ";
+        NSString *description = [dict objectForKey:@"summary"]&&[dict[@"summary"] length]>0?dict[@"summary"]:@"";
+        NSString *utf8String = [dict objectForKey:@"targetUrl"]&&[dict[@"targetUrl"] length]>0?dict[@"targetUrl"]:@"";
         appName = [dict objectForKey:@"appName"];
         cflag = [[dict objectForKey:@"cflag"] intValue];
         if ([dict objectForKey:@"imageUrl"]) {
