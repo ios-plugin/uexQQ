@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CF64B561BF9BBB700A26EF4 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF64B551BF9BBB700A26EF4 /* TencentOpenAPI.framework */; settings = {ASSET_TAGS = (); }; };
 		A0A19B0B198F8DB900BCE211 /* EUExQQ.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A19AFD198F8DB900BCE211 /* EUExQQ.m */; };
 		A0D85481198B2B5100DA58A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D85480198B2B5100DA58A1 /* Foundation.framework */; };
-		F7D45A311A175FA800B0335F /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D45A301A175FA800B0335F /* TencentOpenAPI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3CF64B541BF9BBB700A26EF4 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		3CF64B551BF9BBB700A26EF4 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		A0A19AF8198F8DB900BCE211 /* EUExBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBase.h; sourceTree = "<group>"; };
 		A0A19AF9198F8DB900BCE211 /* EUExBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBaseDefine.h; sourceTree = "<group>"; };
 		A0A19AFA198F8DB900BCE211 /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
@@ -42,8 +44,6 @@
 		A0A19B08198F8DB900BCE211 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		A0D8547D198B2B5100DA58A1 /* libuexQQ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexQQ.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D85480198B2B5100DA58A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F7D45A2F1A175FA800B0335F /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TencentOpenApi_IOS_Bundle.bundle; path = EUExQQ/sourceCode/TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
-		F7D45A301A175FA800B0335F /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = EUExQQ/sourceCode/TencentOpenAPI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0D85481198B2B5100DA58A1 /* Foundation.framework in Frameworks */,
-				F7D45A311A175FA800B0335F /* TencentOpenAPI.framework in Frameworks */,
+				3CF64B561BF9BBB700A26EF4 /* TencentOpenAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,8 +125,8 @@
 		A0D8547F198B2B5100DA58A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F7D45A2F1A175FA800B0335F /* TencentOpenApi_IOS_Bundle.bundle */,
-				F7D45A301A175FA800B0335F /* TencentOpenAPI.framework */,
+				3CF64B541BF9BBB700A26EF4 /* TencentOpenApi_IOS_Bundle.bundle */,
+				3CF64B551BF9BBB700A26EF4 /* TencentOpenAPI.framework */,
 				A0D85480198B2B5100DA58A1 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -279,6 +279,7 @@
 					"$(inherited)",
 					"/Users/huili/Desktop/appcan/我的任务/uexQQ/EUExQQ/EUExQQ/sourceCode",
 					"$(PROJECT_DIR)/EUExQQ/sourceCode",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EUExQQ/EUExQQ-Prefix.pch";
@@ -298,6 +299,7 @@
 					"$(inherited)",
 					"/Users/huili/Desktop/appcan/我的任务/uexQQ/EUExQQ/EUExQQ/sourceCode",
 					"$(PROJECT_DIR)/EUExQQ/sourceCode",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EUExQQ/EUExQQ-Prefix.pch";

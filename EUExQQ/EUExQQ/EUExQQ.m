@@ -70,7 +70,13 @@
         [_tencentOAuth authorize:permissions];
     }
 }
-
+-(void)logout:(NSMutableArray *)inArguments{
+    
+    [self.tencentOAuth logout:self];
+}
+-(void)getUserInfo:(NSMutableArray *)inArguments{
+    [_tencentOAuth getUserInfo];
+}
 -(void)isQQInstalled:(NSMutableArray *)inArguments{
     BOOL isInstalled = [QQApiInterface isQQInstalled];
     if (isInstalled) {
@@ -468,9 +474,11 @@
 #pragma mark -
 #pragma mark - TencentSessionDelegate
 
-- (void)cbLogin {
-    
-    [self jsSuccessWithName:@"uexQQ.cbLogin" opId:0 dataType:2 strData:self.cbQQLoginStr];
+- (void)cbLogin:(NSString*)result {
+    if(![result isKindOfClass:[NSString class]]){
+        result=[result JSONFragment];
+    }
+    [self jsSuccessWithName:@"uexQQ.cbLogin" opId:0 dataType:2 strData:result];
 }
 
 
@@ -485,8 +493,7 @@
     NSMutableDictionary *resultDict=[NSMutableDictionary dictionary];
     [resultDict setValue:ret forKey:@"ret"];
     [resultDict setValue:data forKey:@"data"];
-    self.cbQQLoginStr=[resultDict JSONFragment];
-    [self performSelector:@selector(cbLogin)withObject:self afterDelay:1.0];
+    [self cbLogin:[resultDict JSONFragment]];
 }
 - (void)tencentDidLogin {
     /*
@@ -533,6 +540,9 @@
 }
 
 - (void)tencentDidLogout{
+    //NSLog(@"---------logout-----------%@",_tencentOAuth);
+    _tencentOAuth=nil;
+    [self jsSuccessWithName:@"uexQQ.cbLogout" opId:0 dataType:UEX_CALLBACK_DATATYPE_INT intData:UEX_CSUCCESS];
 }
 - (void)dealloc {
     
@@ -554,5 +564,22 @@
     
     [_cbShareStr release];
     _cbShareStr = nil;
+}
+- (void)getUserInfoResponse:(APIResponse*) response{
+    //NSLog(@"%@",response.jsonResponse);
+    if(response.jsonResponse&&!response.errorMsg){
+        NSString *userInfo=[response.jsonResponse JSONFragment];
+        [self cbGetUserInfo:userInfo];
+    }
+    else if (response.errorMsg){
+        NSString *err=[response.errorMsg JSONFragment];
+        [self cbGetUserInfo:err];
+    }
+}
+-(void)cbGetUserInfo:(NSString*)result{
+    if(![result isKindOfClass:[NSString class]]){
+        result=[result JSONFragment];
+    }
+    [self jsSuccessWithName:@"uexQQ.cbGetUserInfo" opId:0 dataType:2 strData:result];
 }
 @end

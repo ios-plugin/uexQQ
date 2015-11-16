@@ -7,6 +7,8 @@
         <method name="shareAudioToQQ"></method>
         <method name="shareImgTextToQZone"></method>
         <method name="isQQInstalled"></method>
+        <method name="logout"></method>
+        <method name="getUserInfo"></method>
     </plugin>
 </uexplugins>
 

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <uexplugins>
     <plugin
-        uexName="uexQQ" version="3.0.12" build="12">
-        <info>12:删去腾讯SDK中的info.plist,防止ERROR ITMS-90049</info>
+        uexName="uexQQ" version="3.0.13" build="13">
+        <info>13:SDK更新为2.9.3(2015-11-03）,新增注销授权、获取用户信息接口</info>
+        <build>12:删去腾讯SDK中的info.plist,防止ERROR ITMS-90049</build>
         <build>11:sdk版本升级至2.9.2</build>
         <build>10:删除bundle中info.plist的Executable字段,解决Xcode7上传报错的问题</build>
         <build>9:修复取消登录时cbLogin不触发的bug</build>
