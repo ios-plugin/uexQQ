@@ -10,11 +10,24 @@
 #import "EUExQQ.h"
 #import "EUtility.h"
 #import "JSON.h"
-#import <TencentOpenAPI/sdkdef.h>
 #import "EUExBase.h"
+#import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 
+@interface EUExQQ()<TencentSessionDelegate,UIAlertViewDelegate,QQApiInterfaceDelegate>
+@property (nonatomic, retain) TencentOAuth *tencentOAuth;
+@property (nonatomic, retain) NSString *cbShareStr;
+@property (nonatomic, retain) QQApiObject *qqApiObj;
+@property (nonatomic, retain) NSString *cbQQLoginStr;
+@property (nonatomic, assign) QQSendType sendType;
+@end
+
+static EUExQQ *callbackTarget = nil;
+
+
 @implementation EUExQQ
+
+
 
 -(id)initWithBrwView:(EBrowserView *) eInBrwView {
     if (self = [super initWithBrwView:eInBrwView]) {
@@ -68,11 +81,13 @@
             _tencentOAuth = [[TencentOAuth alloc] initWithAppId:appid andDelegate:self];
         }
         [_tencentOAuth authorize:permissions];
+        callbackTarget = self;
     }
 }
 -(void)logout:(NSMutableArray *)inArguments{
     
     [self.tencentOAuth logout:self];
+    callbackTarget = self;
 }
 -(void)getUserInfo:(NSMutableArray *)inArguments{
     [_tencentOAuth getUserInfo];
@@ -131,6 +146,7 @@
             SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:newsObj];
             QQApiSendResultCode sent = [QQApiInterface sendReq:req];
             [self handleSendResult:sent];
+            callbackTarget = self;
             /*
             if(cflag == 1){
                 UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"请选择分享的平台" message:@"请选择你要分享内容的平台" delegate:self cancelButtonTitle:@"QZone" otherButtonTitles:@"QQ", nil];
@@ -193,6 +209,7 @@
         SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:imgObj];
         QQApiSendResultCode sent = [QQApiInterface sendReq:req];
         [self handleSendResult:sent];
+        callbackTarget = self;
         /*
         
         if(cflag == 1){
@@ -270,6 +287,7 @@
         SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:newsObj];
         QQApiSendResultCode sent = [QQApiInterface SendReqToQZone:req];
         [self handleSendResult:sent];
+        callbackTarget = self;
         
     }
 }
@@ -313,6 +331,7 @@
         SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:audioObj];
         QQApiSendResultCode sent = [QQApiInterface sendReq:req];
         [self handleSendResult:sent];
+        callbackTarget = self;
         /*
         if(cflag == 1){
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"请选择分享的平台" message:@"请选择你要分享内容的平台" delegate:self cancelButtonTitle:@"QZone" otherButtonTitles:@"QQ", nil];
@@ -442,13 +461,33 @@
     [self jsSuccessWithName:@"uexQQ.cbShareQQ" opId:0 dataType:UEX_CALLBACK_DATATYPE_JSON strData:self.cbShareStr];
 }
 
-- (void)parseURL:(NSURL *)url application:(UIApplication *)application {
-    
++ (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    [callbackTarget handleOpenURL:url];
+    return YES;
+}
+
++ (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    [callbackTarget handleOpenURL:url];
+    return YES;
+}
+
+
+- (void)handleOpenURL:(NSURL *)url{
     [QQApiInterface handleOpenURL:url delegate:self];
     BOOL isCan = [TencentOAuth CanHandleOpenURL:url];
     if (isCan) {
         [TencentOAuth HandleOpenURL:url];
     }
+}
+
+- (void)parseURL:(NSURL *)url application:(UIApplication *)application {
+    /*
+    [QQApiInterface handleOpenURL:url delegate:self];
+    BOOL isCan = [TencentOAuth CanHandleOpenURL:url];
+    if (isCan) {
+        [TencentOAuth HandleOpenURL:url];
+    }
+     */
 }
 
 #pragma mark UIAlertViewDelegate

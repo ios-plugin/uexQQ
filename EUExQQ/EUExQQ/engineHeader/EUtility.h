@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @class EBrowserView;
+
 void PluginLog(NSString *format, ...);
 @interface EUtility : NSObject {
 }

@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "EUExBase.h"
-#import <TencentOpenAPI/TencentOAuth.h>
+
 #import "EUExBaseDefine.h"
-#import "TencentOpenAPI/QQApiInterface.h"
+
 
 typedef enum{
     QQNewsWeb = 0,
@@ -19,13 +19,9 @@ typedef enum{
     QQShareImg
     
 }QQSendType;
-@interface EUExQQ : EUExBase <TencentSessionDelegate,UIAlertViewDelegate,QQApiInterfaceDelegate>
+@interface EUExQQ : EUExBase 
 
-@property (nonatomic, retain) TencentOAuth *tencentOAuth;
-@property (nonatomic, retain) NSString *cbShareStr;
-@property (nonatomic, retain) QQApiObject *qqApiObj;
-@property (nonatomic, retain) NSString *cbQQLoginStr;
-@property (nonatomic, assign) QQSendType sendType;
+
 
 
 
