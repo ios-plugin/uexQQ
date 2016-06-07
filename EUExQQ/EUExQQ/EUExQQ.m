@@ -102,11 +102,11 @@ static EUExQQ *callbackTarget = nil;
     if (isInstalled) {
         //[self jsSuccessWithName:@"uexQQ.cbIsQQInstalled" opId:0 dataType:UEX_CALLBACK_DATATYPE_INT intData:UEX_CSUCCESS];
         [self.webViewEngine callbackWithFunctionKeyPath:@"uexQQ.cbIsQQInstalled" arguments:ACArgsPack(@0,@2,@0)];
-        [self.funcInstalled executeWithArguments:ACArgsPack(@0,@2,@0)];
+        [self.funcInstalled executeWithArguments:ACArgsPack(@0)];
     }else{
        // [self jsSuccessWithName:@"uexQQ.cbIsQQInstalled" opId:0 dataType:UEX_CALLBACK_DATATYPE_INT intData:UEX_CFAILED];
         [self.webViewEngine callbackWithFunctionKeyPath:@"uexQQ.cbIsQQInstalled" arguments:ACArgsPack(@0,@2,@1)];
-        [self.funcInstalled executeWithArguments:ACArgsPack(@0,@2,@1)];
+        [self.funcInstalled executeWithArguments:ACArgsPack(@1)];
     }
     self.funcInstalled = nil;
 }
@@ -474,7 +474,7 @@ static EUExQQ *callbackTarget = nil;
 - (void)cbShare {
     //[self jsSuccessWithName:@"uexQQ.cbShareQQ" opId:0 dataType:UEX_CALLBACK_DATATYPE_JSON strData:self.cbShareStr];
      [self.webViewEngine callbackWithFunctionKeyPath:@"uexQQ.cbShareQQ" arguments:ACArgsPack(@0,@1,self.cbShareStr)];
-    [self.funcShare executeWithArguments:ACArgsPack(@0,@1,self.cbShareStr)];
+    [self.funcShare executeWithArguments:ACArgsPack(self.cbShareStr)];
     self.funcShare = nil;
 }
 
@@ -536,7 +536,7 @@ static EUExQQ *callbackTarget = nil;
     }
     //[self jsSuccessWithName:@"uexQQ.cbLogin" opId:0 dataType:2 strData:result];
      [self.webViewEngine callbackWithFunctionKeyPath:@"uexQQ.cbLogin" arguments:ACArgsPack(@0,@2,result)];
-    [self.funcLogin executeWithArguments:ACArgsPack(@0,@2,result)];
+    [self.funcLogin executeWithArguments:ACArgsPack(result)];
      self.funcLogin = nil;
 }
 
@@ -603,7 +603,7 @@ static EUExQQ *callbackTarget = nil;
     _tencentOAuth=nil;
     //[self jsSuccessWithName:@"uexQQ.cbLogout" opId:0 dataType:UEX_CALLBACK_DATATYPE_INT intData:UEX_CSUCCESS];
     [self.webViewEngine callbackWithFunctionKeyPath:@"uexQQ.cbLogout" arguments:ACArgsPack(@0,@2,@0)];
-    [self.funcLogout executeWithArguments:ACArgsPack(@0,@2,@0)];
+    [self.funcLogout executeWithArguments:ACArgsPack(@0)];
     self.funcLogout = nil;
 }
 - (void)dealloc {
@@ -644,7 +644,7 @@ static EUExQQ *callbackTarget = nil;
     }
     //[self jsSuccessWithName:@"uexQQ.cbGetUserInfo" opId:0 dataType:2 strData:result];
      [self.webViewEngine callbackWithFunctionKeyPath:@"uexQQ.cbGetUserInfo" arguments:ACArgsPack(@0,@2,result)];
-    [self.funcGetInfo executeWithArguments:ACArgsPack(@0,@2,result)];
+    [self.funcGetInfo executeWithArguments:ACArgsPack(result)];
     self.funcGetInfo = nil;
     
 }
