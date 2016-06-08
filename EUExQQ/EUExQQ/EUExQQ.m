@@ -13,7 +13,7 @@
 
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
-
+#import <TencentOpenAPI/TencentMessageObject.h>
 @interface EUExQQ()<TencentSessionDelegate,UIAlertViewDelegate,QQApiInterfaceDelegate>
 @property (nonatomic, retain) TencentOAuth *tencentOAuth;
 @property (nonatomic, retain) NSString *cbShareStr;
@@ -46,7 +46,7 @@ static EUExQQ *callbackTarget = nil;
 
 - (void)login:(NSMutableArray *)inArguments {
     
-    if (inArguments != nil && inArguments.count == 1) {
+    if (inArguments != nil ) {
         ACJSFunctionRef *func = JSFunctionArg(inArguments.lastObject);
         self.funcLogin = func;
         NSArray* permissions = [NSArray arrayWithObjects:
@@ -95,20 +95,19 @@ static EUExQQ *callbackTarget = nil;
     self.funcGetInfo = func;
     [_tencentOAuth getUserInfo];
 }
--(void)isQQInstalled:(NSMutableArray *)inArguments{
-    ACJSFunctionRef *func = JSFunctionArg(inArguments.lastObject);
-    self.funcInstalled = func;
+-(NSNumber*)isQQInstalled:(NSMutableArray *)inArguments{
+
     BOOL isInstalled = [QQApiInterface isQQInstalled];
-    if (isInstalled) {
+    if (isInstalled){
         //[self jsSuccessWithName:@"uexQQ.cbIsQQInstalled" opId:0 dataType:UEX_CALLBACK_DATATYPE_INT intData:UEX_CSUCCESS];
         [self.webViewEngine callbackWithFunctionKeyPath:@"uexQQ.cbIsQQInstalled" arguments:ACArgsPack(@0,@2,@0)];
-        [self.funcInstalled executeWithArguments:ACArgsPack(@0)];
+        
     }else{
        // [self jsSuccessWithName:@"uexQQ.cbIsQQInstalled" opId:0 dataType:UEX_CALLBACK_DATATYPE_INT intData:UEX_CFAILED];
         [self.webViewEngine callbackWithFunctionKeyPath:@"uexQQ.cbIsQQInstalled" arguments:ACArgsPack(@0,@2,@1)];
-        [self.funcInstalled executeWithArguments:ACArgsPack(@1)];
+        
     }
-    self.funcInstalled = nil;
+    return @(isInstalled);
 }
 
 /**
@@ -118,7 +117,7 @@ static EUExQQ *callbackTarget = nil;
      ACJSFunctionRef *func = JSFunctionArg(inArguments.lastObject);
     self.funcShare = func;
     _sendType = QQNewsWeb;
-    if (IS_NSMutableArray(inArguments) && [inArguments count] == 2) {
+    if (IS_NSMutableArray(inArguments)) {
         NSString *appId = [inArguments objectAtIndex:0];
         
         if (_tencentOAuth == nil) {
@@ -188,7 +187,7 @@ static EUExQQ *callbackTarget = nil;
     self.funcShare = func;
     _sendType = QQShareImg;
     
-    if (IS_NSMutableArray(inArguments) && [inArguments count] == 2) {
+    if (IS_NSMutableArray(inArguments)) {
         
         NSString *appId = [inArguments objectAtIndex:0];
         
@@ -252,7 +251,7 @@ static EUExQQ *callbackTarget = nil;
     ACJSFunctionRef *func = JSFunctionArg(inArguments.lastObject);
     self.funcShare = func;
     _sendType = QQNewsWeb;
-    if (inArguments.count >=2) {
+    if (inArguments.count > 0) {
         
         NSString *appId = [inArguments objectAtIndex:0];
         NSString *json = [inArguments objectAtIndex:1];
@@ -308,7 +307,7 @@ static EUExQQ *callbackTarget = nil;
 -(void)shareAudioToQQ:(NSMutableArray *)inArguments  {
     ACJSFunctionRef *func = JSFunctionArg(inArguments.lastObject);
     self.funcShare = func;
-    if (inArguments.count >= 2) {
+    if (inArguments.count > 0) {
         
         NSString *appid = [inArguments objectAtIndex:0];
         NSString *json = [inArguments objectAtIndex:1];
