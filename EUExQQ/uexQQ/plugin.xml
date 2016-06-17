@@ -6,7 +6,7 @@
         <method name="shareLocalImgToQQ"></method>
         <method name="shareAudioToQQ"></method>
         <method name="shareImgTextToQZone"></method>
-        <method name="isQQInstalled" sync = "true" ></method>
+        <method name="isQQInstalled"></method>
         <method name="logout"></method>
         <method name="getUserInfo"></method>
     </plugin>
