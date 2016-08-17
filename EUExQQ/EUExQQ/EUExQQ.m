@@ -9,7 +9,7 @@
 
 #import "EUExQQ.h"
 #import "EUtility.h"
-#import "JSON.h"
+
 
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
@@ -130,7 +130,7 @@ static EUExQQ *callbackTarget = nil;
         NSString *appName = nil;
         int  cflag ;
         NSMutableDictionary *dict = [[[NSMutableDictionary alloc] init] autorelease];
-        dict = [json JSONValue];
+        dict = [json ac_JSONValue];
         NSString *title = ([dict objectForKey:@"title"]&&[dict[@"title"] length]>0)?dict[@"title"]:@" ";
         NSString *description = [dict objectForKey:@"summary"]&&[dict[@"summary"] length]>0?dict[@"summary"]:@"";
         NSString *utf8String = [dict objectForKey:@"targetUrl"]&&[dict[@"targetUrl"] length]>0?dict[@"targetUrl"]:@"";
@@ -201,7 +201,7 @@ static EUExQQ *callbackTarget = nil;
         NSString *appName = nil;
         int  cflag ;
         NSMutableDictionary *dict = [[[NSMutableDictionary alloc] init] autorelease];
-        dict = [json JSONValue];
+        dict = [json ac_JSONValue];
         appName = [dict objectForKey:@"appName"];
         cflag = [[dict objectForKey:@"cflag"] intValue];
         imageLocalUrl = [dict objectForKey:@"imageLocalUrl"];
@@ -260,7 +260,7 @@ static EUExQQ *callbackTarget = nil;
         NSString *description = nil;
         NSString *utf8String = nil;
         NSMutableDictionary *dict = [[[NSMutableDictionary alloc] init] autorelease];
-        dict = [json JSONValue];
+        dict = [json ac_JSONValue];
         title = [dict objectForKey:@"title"];
         description = [dict objectForKey:@"summary"];
         utf8String = [dict objectForKey:@"targetUrl"];
@@ -312,7 +312,7 @@ static EUExQQ *callbackTarget = nil;
         NSString *appid = [inArguments objectAtIndex:0];
         NSString *json = [inArguments objectAtIndex:1];
         NSMutableDictionary *dict = [[[NSMutableDictionary alloc]init] autorelease];
-        dict = [json JSONValue];
+        dict = [json ac_JSONValue];
         
         if (_tencentOAuth == nil) {
             
@@ -531,11 +531,11 @@ static EUExQQ *callbackTarget = nil;
 
 - (void)cbLogin:(NSString*)result {
     if(![result isKindOfClass:[NSString class]]){
-        result=[result JSONFragment];
+        result=[result ac_JSONFragment];
     }
     //[self jsSuccessWithName:@"uexQQ.cbLogin" opId:0 dataType:2 strData:result];
      [self.webViewEngine callbackWithFunctionKeyPath:@"uexQQ.cbLogin" arguments:ACArgsPack(@0,@2,result)];
-    [self.funcLogin executeWithArguments:ACArgsPack(result)];
+    [self.funcLogin executeWithArguments:ACArgsPack([result ac_JSONValue])];
      self.funcLogin = nil;
 }
 
@@ -551,7 +551,7 @@ static EUExQQ *callbackTarget = nil;
     NSMutableDictionary *resultDict=[NSMutableDictionary dictionary];
     [resultDict setValue:ret forKey:@"ret"];
     [resultDict setValue:data forKey:@"data"];
-    [self cbLogin:[resultDict JSONFragment]];
+    [self cbLogin:[resultDict ac_JSONFragment]];
 }
 - (void)tencentDidLogin {
     /*
@@ -629,17 +629,17 @@ static EUExQQ *callbackTarget = nil;
 - (void)getUserInfoResponse:(APIResponse*) response{
     //NSLog(@"%@",response.jsonResponse);
     if(response.jsonResponse&&!response.errorMsg){
-        NSString *userInfo=[response.jsonResponse JSONFragment];
+        NSString *userInfo=[response.jsonResponse ac_JSONFragment];
         [self cbGetUserInfo:userInfo];
     }
     else if (response.errorMsg){
-        NSString *err=[response.errorMsg JSONFragment];
+        NSString *err=[response.errorMsg ac_JSONFragment];
         [self cbGetUserInfo:err];
     }
 }
 -(void)cbGetUserInfo:(NSString*)result{
     if(![result isKindOfClass:[NSString class]]){
-        result=[result JSONFragment];
+        result=[result ac_JSONFragment];
     }
     //[self jsSuccessWithName:@"uexQQ.cbGetUserInfo" opId:0 dataType:2 strData:result];
      [self.webViewEngine callbackWithFunctionKeyPath:@"uexQQ.cbGetUserInfo" arguments:ACArgsPack(@0,@2,result)];
