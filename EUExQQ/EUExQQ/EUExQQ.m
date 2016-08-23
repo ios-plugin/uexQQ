@@ -16,6 +16,7 @@
 #import <TencentOpenAPI/TencentMessageObject.h>
 @interface EUExQQ()<TencentSessionDelegate,UIAlertViewDelegate,QQApiInterfaceDelegate>
 @property (nonatomic, retain) TencentOAuth *tencentOAuth;
+@property (nonatomic, retain) NSDictionary *cbShareDic;
 @property (nonatomic, retain) NSString *cbShareStr;
 @property (nonatomic, retain) QQApiObject *qqApiObj;
 @property (nonatomic, retain) NSString *cbQQLoginStr;
@@ -452,9 +453,11 @@ static EUExQQ *callbackTarget = nil;
             SendMessageToQQResp* sendResp = (SendMessageToQQResp*)resp;
             if (sendResp.errorDescription) {
                 self.cbShareStr = [NSString stringWithFormat:@"{\"errCode\":\"%@\",\"errStr\":\"%@\"}",sendResp.result, sendResp.errorDescription];
+                self.cbShareDic = @{@"errCode":@(1),@"errorDescription":sendResp.errorDescription};
             }
             else{
                 self.cbShareStr = [NSString stringWithFormat:@"{\"errCode\":\"%@\",\"errStr\":\"\"}",sendResp.result];
+                self.cbShareDic = @{@"errCode":@(0),@"errorDescription":@""};
             }
             //延迟回调
             [self performSelector:@selector(cbShare) withObject:self afterDelay:1.0];
@@ -473,7 +476,7 @@ static EUExQQ *callbackTarget = nil;
 - (void)cbShare {
     //[self jsSuccessWithName:@"uexQQ.cbShareQQ" opId:0 dataType:UEX_CALLBACK_DATATYPE_JSON strData:self.cbShareStr];
      [self.webViewEngine callbackWithFunctionKeyPath:@"uexQQ.cbShareQQ" arguments:ACArgsPack(@0,@1,self.cbShareStr)];
-    [self.funcShare executeWithArguments:ACArgsPack(self.cbShareStr)];
+    [self.funcShare executeWithArguments:ACArgsPack(self.cbShareDic[@"errCode"],self.cbShareDic[@"errorDescription"])];
     self.funcShare = nil;
 }
 
@@ -529,13 +532,15 @@ static EUExQQ *callbackTarget = nil;
 #pragma mark -
 #pragma mark - TencentSessionDelegate
 
-- (void)cbLogin:(NSString*)result {
-    if(![result isKindOfClass:[NSString class]]){
-        result=[result ac_JSONFragment];
-    }
+- (void)cbLogin:(NSDictionary*)result {
+//    if(![result isKindOfClass:[NSString class]]){
+//        result=[result ac_JSONFragment];
+//    }
     //[self jsSuccessWithName:@"uexQQ.cbLogin" opId:0 dataType:2 strData:result];
-     [self.webViewEngine callbackWithFunctionKeyPath:@"uexQQ.cbLogin" arguments:ACArgsPack(@0,@2,result)];
-    [self.funcLogin executeWithArguments:ACArgsPack([result ac_JSONValue])];
+    NSNumber *state = result[@"ret"];
+    NSDictionary *dic = result[@"data"];
+     [self.webViewEngine callbackWithFunctionKeyPath:@"uexQQ.cbLogin" arguments:ACArgsPack(@0,@2,[result ac_JSONFragment])];
+    [self.funcLogin executeWithArguments:ACArgsPack(state,dic)];
      self.funcLogin = nil;
 }
 
@@ -551,7 +556,7 @@ static EUExQQ *callbackTarget = nil;
     NSMutableDictionary *resultDict=[NSMutableDictionary dictionary];
     [resultDict setValue:ret forKey:@"ret"];
     [resultDict setValue:data forKey:@"data"];
-    [self cbLogin:[resultDict ac_JSONFragment]];
+    [self cbLogin:[resultDict copy]];
 }
 - (void)tencentDidLogin {
     /*
