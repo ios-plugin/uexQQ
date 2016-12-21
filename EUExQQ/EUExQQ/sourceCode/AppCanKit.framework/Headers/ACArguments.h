@@ -74,8 +74,8 @@
         参数不支持可变类型(比如NSMutableDictionary等),需要可变类型时应该先获得不可变类型,然后用mutableCopy进行转换
         参数目前不支持NSInteger等基本类型或者C的struct类型。若需要获取数值类型的参数,应定义为NSNumber *,然后进行转换
  *  @note 此宏不能单独存在于一个Scope或者Condition中,且此宏的参数必须写在同一行中,否则宏展开会出错
+ *  @note 此宏只能运行在ARC环境中
  *
- *  @todo 参数支持NSInteger等数值基本类型
  */
 #define ACArgsUnpack(...)\
     _ACArgsUnpack(__VA_ARGS__)
@@ -84,7 +84,7 @@
 
 /**
  *  尝试转换一个参数为NSString
- *  @param NSString->直接返回, JSValue->解析并返回, NSNumber-> 返回其stringValue
+ *  @param arg JSValue->解析并返回, NSNumber-> 返回其stringValue
  *  @return 其他情况或解析失败时返回nil
  */
 APPCAN_EXPORT NSString* _Nullable ac_stringArg(id _Nullable arg);
@@ -92,7 +92,7 @@ APPCAN_EXPORT_AS_SHORT(NSString* _Nullable stringArg(id _Nullable arg), ac_strin
 
 /**
  *  尝试转换一个参数为NSNumber
- *  @param NSNumber->直接返回, JSValue->解析并返回, NSString且长度>0->返回一个NSDecimalNumber
+ *  @param arg JSValue->解析并返回, NSString且长度>0->返回一个NSDecimalNumber
  *  @return 其他情况或解析失败时返回nil
  */
 APPCAN_EXPORT NSNumber* _Nullable ac_numberArg(id _Nullable arg);
@@ -100,7 +100,7 @@ APPCAN_EXPORT_AS_SHORT(NSNumber* _Nullable numberArg(id _Nullable arg), ac_numbe
 
 /**
  *  尝试转换一个参数为NSDictionary
- *  @param NSDictionary->直接返回, JSValue且是Object->解析并返回, NSString且为JSON字符串 -> 解析并返回
+ *  @param arg JSValue且是Object->解析并返回, NSString且为JSON字符串 -> 解析并返回
  *  @return 其他情况或解析失败时返回nil
  */
 APPCAN_EXPORT NSDictionary* _Nullable ac_dictionaryArg(id _Nullable arg);
@@ -108,7 +108,7 @@ APPCAN_EXPORT_AS_SHORT(NSDictionary* _Nullable dictionaryArg(id _Nullable arg), 
 
 /**
  *  尝试转换一个参数为NSArray
- *  @param NSArray->直接返回 ,JSValue且是Array->解析并返回, NSString且为JSON字符串 -> 解析并返回
+ *  @param arg ,JSValue且是Array->解析并返回, NSString且为JSON字符串 -> 解析并返回
  *  @return 其他情况或解析失败时返回nil
  */
 APPCAN_EXPORT NSArray* _Nullable ac_arrayArg(id _Nullable arg);
@@ -132,6 +132,8 @@ APPCAN_EXPORT_AS_SHORT(ACJSFunctionRef* _Nullable JSFunctionArg(id _Nullable arg
 
 #define _ACArgsPack(...) (@[metamacro_foreach(_ACObjectOrNil,,__VA_ARGS__ )])
 #define _ACObjectOrNil(idx,obj) (id)(obj) ?: [ACNil null],
+
+#if __has_feature(objc_arc)
 #define _ACArgsUnpack(...)\
     metamacro_foreach(_ACArgsUnpack_Declare,, __VA_ARGS__) \
     int _ACArgsUnpackState = 0;\
@@ -164,10 +166,20 @@ APPCAN_EXPORT_AS_SHORT(ACJSFunctionRef* _Nullable JSFunctionArg(id _Nullable arg
 #define _ACArgsUnpack_Value(INDEX, ARG) \
     [NSValue valueWithPointer:&_ACArgsUnpack_Declare_Name(INDEX)],
 
+#else
+
+#define _ACArgsUnpack(...)\
+    _Pragma(metamacro_stringify(GCC error("ACArgsUnpack() can only be used with ARC")))\
+    metamacro_foreach(_ACArgsUnpack_Assign_Nil,, __VA_ARGS__)\
+    [ACArgumentsHelper helper][@[[ACNil null]]]
+
+#define _ACArgsUnpack_Assign_Nil(INDEX, ARG)\
+    ARG = nil;
+#endif
 
 
 
-
+NS_SWIFT_UNAVAILABLE("请用AppCanSwift中的JSArgument")
 NS_ASSUME_NONNULL_BEGIN
 @interface ACArgumentsHelper : NSObject
 + (instancetype)helper;

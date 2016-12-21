@@ -25,6 +25,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class JSValue;
+@class UNUserNotificationCenter;
+@class UNNotification;
+@class UNNotificationResponse;
 @protocol AppCanWidgetObject <NSObject>
 
 @property (nonatomic,strong,readonly) NSString *widgetOneId;
@@ -48,23 +51,23 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  网页View,添加到此view上的subView会固定在屏幕上,不会跟随网页滑动
  */
-@property (nonatomic,strong,readonly) __kindof UIView           *webView;
+@property (nonatomic,strong,readonly,nullable) __kindof UIView *webView;
 /**
  *  网页中的ScrollView,添加到此view上的subView会跟随网页滑动
  */
-@property (nonatomic,strong,readonly) __kindof UIScrollView     *webScrollView;
+@property (nonatomic,strong,readonly,nullable) __kindof UIScrollView *webScrollView;
 /**
  *  当前网页所在的viewController
  */
-@property (nonatomic,weak,readonly  ) __kindof UIViewController *viewController;
+@property (nonatomic,weak,readonly) __kindof UIViewController *viewController;
 /**
  *  AppCanWidget对象,里面包含了网页所在的widget信息
  */
-@property (nonatomic,weak,readonly  ) id<AppCanWidgetObject>    widget;
+@property (nonatomic,weak,readonly) id<AppCanWidgetObject>    widget;
 /**
  *  当前网页的URL
  */
-@property (nonatomic,strong,readonly) NSURL                     *currentURL;
+@property (nonatomic,strong,readonly,nullable) NSURL *currentURL;
 
 
 
@@ -87,7 +90,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @discussion 对于无返回值的JS函数,returnValue为一个代表<undefined>的JSValue,而不是nil
  *
  */
-- (void)callbackWithFunctionKeyPath:(NSString *)JSKeyPath arguments:(nullable NSArray *)arguments completion:(nullable void (^)(JSValue *returnValue))completion;
+- (void)callbackWithFunctionKeyPath:(NSString *)JSKeyPath arguments:(nullable NSArray *)arguments completion:(nullable void (^)(JSValue  * _Nullable returnValue))completion;
 
 /**
  *  执行网页中的回调函数,参数同上
@@ -105,6 +108,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 
+
+// UIApplicationDelegate方法
 + (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions;
 + (void)applicationDidBecomeActive:(UIApplication *)application;
 + (void)applicationWillResignActive:(UIApplication *)application;
@@ -125,9 +130,19 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void(^)(BOOL succeeded))completionHandler;
 
 + (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler;
++ (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void(^)(NSArray * __nullable restorableObjects))restorationHandler;
+
+
+
+
+//UNUserNotificationCenterDelegate方法(iOS 10+)
+
+//注意此方法的completionHandler参数应为`UNNotificationPresentationOptions`
++ (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSUInteger))completionHandler;
+
++ (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler;
 
 //应用root网页加载完成时,会执行此方法
 + (void)rootPageDidFinishLoading;
-
 @end
 NS_ASSUME_NONNULL_END

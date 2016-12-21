@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		090962211D02BFDD00399AF3 /* AppCanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090962201D02BFDD00399AF3 /* AppCanKit.framework */; };
-		427DC2811CE334A600842712 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427DC2801CE334A600842712 /* TencentOpenAPI.framework */; };
-		427DC2821CE334AF00842712 /* TencentOpenApi_IOS_Bundle.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 427DC27F1CE334A600842712 /* TencentOpenApi_IOS_Bundle.bundle */; };
-		427DC2831CE334B200842712 /* TencentOpenAPI.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 427DC2801CE334A600842712 /* TencentOpenAPI.framework */; };
+		3C65DD9F1E0A6A7700D1714A /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C65DD9E1E0A6A7700D1714A /* TencentOpenAPI.framework */; };
+		3C65DDA11E0A6B3C00D1714A /* AppCanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C65DDA01E0A6B3C00D1714A /* AppCanKit.framework */; };
 		A0A19B0B198F8DB900BCE211 /* EUExQQ.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A19AFD198F8DB900BCE211 /* EUExQQ.m */; };
 		A0D85481198B2B5100DA58A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D85480198B2B5100DA58A1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -22,17 +20,15 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				427DC2831CE334B200842712 /* TencentOpenAPI.framework in CopyFiles */,
-				427DC2821CE334AF00842712 /* TencentOpenApi_IOS_Bundle.bundle in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		090962201D02BFDD00399AF3 /* AppCanKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppCanKit.framework; sourceTree = "<group>"; };
-		427DC27F1CE334A600842712 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
-		427DC2801CE334A600842712 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		3C65DD9D1E0A6A7700D1714A /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		3C65DD9E1E0A6A7700D1714A /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		3C65DDA01E0A6B3C00D1714A /* AppCanKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppCanKit.framework; sourceTree = "<group>"; };
 		A0A19AF9198F8DB900BCE211 /* EUExBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBaseDefine.h; sourceTree = "<group>"; };
 		A0A19AFA198F8DB900BCE211 /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
 		A0A19AFB198F8DB900BCE211 /* EUExQQ-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EUExQQ-Prefix.pch"; sourceTree = "<group>"; };
@@ -48,8 +44,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0D85481198B2B5100DA58A1 /* Foundation.framework in Frameworks */,
-				090962211D02BFDD00399AF3 /* AppCanKit.framework in Frameworks */,
-				427DC2811CE334A600842712 /* TencentOpenAPI.framework in Frameworks */,
+				3C65DDA11E0A6B3C00D1714A /* AppCanKit.framework in Frameworks */,
+				3C65DD9F1E0A6A7700D1714A /* TencentOpenAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,9 +76,9 @@
 		A0A19AFE198F8DB900BCE211 /* sourceCode */ = {
 			isa = PBXGroup;
 			children = (
-				090962201D02BFDD00399AF3 /* AppCanKit.framework */,
-				427DC27F1CE334A600842712 /* TencentOpenApi_IOS_Bundle.bundle */,
-				427DC2801CE334A600842712 /* TencentOpenAPI.framework */,
+				3C65DDA01E0A6B3C00D1714A /* AppCanKit.framework */,
+				3C65DD9D1E0A6A7700D1714A /* TencentOpenApi_IOS_Bundle.bundle */,
+				3C65DD9E1E0A6A7700D1714A /* TencentOpenAPI.framework */,
 			);
 			path = sourceCode;
 			sourceTree = "<group>";

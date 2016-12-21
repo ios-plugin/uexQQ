@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <uexplugins>
-    <plugin uexName="uexQQ" version="4.0.0" build="0">
-        <info>0:uexQQ 插件4.0</info>
+    <plugin uexName="uexQQ" version="4.0.1" build="1">
+        <info>1:SDK升级到3.1.3, 支持ATS</info>
+        <build>0:uexQQ 插件4.0</build>
     </plugin>
 </uexplugins>

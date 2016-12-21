@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  AppCan插件基类
  */
-@interface EUExBase : NSObject<AppCanApplicationEventObserver>
+@interface EUExBase : NSObject
 
 @property (nonatomic, weak) id<AppCanWebViewEngineObject> webViewEngine;
 
@@ -101,7 +101,7 @@ APPCAN_EXPORT id<AppCanWidgetObject> AppCanMainWidget(void);
  */
 @class EBrowserView;
 @interface EUExBase(){
-    __weak EBrowserView* meBrwView APPCAN_LEGACY_PROPERTY;
+    @public __weak EBrowserView* meBrwView APPCAN_LEGACY_PROPERTY;
 }
 @property (nonatomic,weak)EBrowserView *meBrwView APPCAN_LEGACY_METHOD;
 - (instancetype)initWithBrwView:(id<AppCanWebViewEngineObject>)eInBrwView APPCAN_LEGACY_METHOD;
