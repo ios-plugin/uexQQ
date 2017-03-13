@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <uexplugins>
-    <plugin uexName="uexQQ" version="4.0.1" build="1">
-        <info>1:SDK升级到3.1.3, 支持ATS</info>
+    <plugin uexName="uexQQ" version="4.0.2" build="2">
+        <info>2:修复分享资源路径不支持https的问题</info>
+        <build>1:SDK升级到3.1.3, 支持ATS</build>
         <build>0:uexQQ 插件4.0</build>
     </plugin>
 </uexplugins>

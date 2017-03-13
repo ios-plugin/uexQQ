@@ -132,7 +132,7 @@ static EUExQQ *callbackTarget = nil;
             NSString *imagePath = [dict objectForKey:@"imageUrl"];
             imagePath = [self absPath:imagePath];
             QQApiNewsObject *newsObj = Nil;
-            if ([imagePath hasPrefix:@"http://"]) {
+            if ([imagePath hasPrefix:@"http"]) {
                 newsObj = [QQApiNewsObject objectWithURL:STRTOURL(utf8String) title:title description:description previewImageURL:STRTOURL(imagePath)];
             }
             else{
@@ -268,7 +268,7 @@ static EUExQQ *callbackTarget = nil;
             previewImageUrl = [previewImageUrlArr objectAtIndex:0];
         }
         //如果是网络图片
-        if ([previewImageUrl hasPrefix:@"http://"]) {
+        if ([previewImageUrl hasPrefix:@"http"]) {
             newsObj = [QQApiNewsObject
                        objectWithURL:STRTOURL(utf8String)
                        title:title
